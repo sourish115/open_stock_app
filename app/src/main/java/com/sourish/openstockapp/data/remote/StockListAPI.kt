@@ -8,7 +8,7 @@ interface StockListAPI {
 
     @GET("query?function=LISTING_STATUS")
     suspend fun getStockList(
-        @Query("apiKey") apiKey : String
+        @Query("apiKey") apiKey : String = API_KEY
     ): ResponseBody
 
     companion object {
